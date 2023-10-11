@@ -7,7 +7,6 @@ Array.prototype.random = function () {
   return this[Math.floor(Math.random() * this.length)];
 };
 
-
 const words = [..."абвгдеёжзийклмнопрстуфхцчшщъыьэюя "];
-let res = SelectMethod(2, 10, "abobaabobakekkek asd dsdsd".toLowerCase(), words);
+let res = SelectMethod(1, 10, "я мудак ебаный".toLowerCase(), words);
 console.log(res)
