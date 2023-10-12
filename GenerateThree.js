@@ -12,7 +12,19 @@ Array.prototype.random = function () {
 
 const GenerateThree = (lenStr, str) => {
     let a = SearchAndSolidGroubsWords(str);
-
+    a = reduceCountValuesToPercent(a, sumValuesOfWords(a));
+    tempArr = [];
+    res ='';
+    a.forEach((v, w) => {
+      for (let j = 0; j < v; j++) {
+        tempArr.push(w);
+      }
+    });
+    
+    for(let i = 0; i < lenStr; i++) {
+        res += tempArr[Math.floor(Math.random() * tempArr.length)];
+    }
+    console.log(res);
     return ("test")
 };
 
