@@ -25,7 +25,7 @@ const GenerateThree = (lenStr, str) => {
         res += tempArr[Math.floor(Math.random() * tempArr.length)];
     }
     console.log(res);
-    return ("test")
+    return res;
 };
 
 module.exports = GenerateThree;
