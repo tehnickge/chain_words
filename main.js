@@ -10,5 +10,5 @@ Array.prototype.random = function () {
 
 
 const words = [..."абвгдеёжзийклмнопрстуфхцчшщъыьэюя "];
-let res = SelectMethod(1, 10, "я мудак ебаный".toLowerCase(), words);
+let res = SelectMethod(2, 10, "KEKEKE".toLowerCase(), words);
 console.log(res)

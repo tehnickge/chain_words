@@ -21,10 +21,29 @@ const reduceCountValuesToPercent = (wordsCoefMap, sum) => {
     return wordsCoefMap
 }
 
+const SearchAndSolidGroubsWords = (str) => { 
+    let resStr = ''
+    let strGroupWordsMap = new Map();
+    for (let i = 0; i < str.length -1; i++) {
+        console.log(strGroupWordsMap.has(`${str[i]}${str[i + 1]}`));
+            if(!( strGroupWordsMap.has(`${str[i]}${str[i+1]}`) )) {
+                    strGroupWordsMap.set(`${str[i]}${str[i+1]}`, 1)
+                } else {
+                    let tempCount = strGroupWordsMap.get(`${str[i]}${str[i+1]}`);
+                    console.log(tempCount)
+                    strGroupWordsMap.set(`${str[i]}${str[i + 1]}`, tempCount + 1);
+                }
+                    
+        
+    }
+    console.log(strGroupWordsMap)
+    return strGroupWordsMap;
+}
+
 
 module.exports = {
-    countOfAnyWords,
-    sumValuesOfWords,
-    reduceCountValuesToPercent,
-
-}
+  countOfAnyWords,
+  sumValuesOfWords,
+  reduceCountValuesToPercent,
+  SearchAndSolidGroubsWords,
+};
