@@ -24,7 +24,6 @@ const GenerateThree = (lenStr, str) => {
     for(let i = 0; i < lenStr; i++) {
         res += tempArr[Math.floor(Math.random() * tempArr.length)];
     }
-    console.log(res);
     return res;
 };
 
