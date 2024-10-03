@@ -22,7 +22,6 @@ const reduceCountValuesToPercent = (wordsCoefMap, sum) => {
 }
 
 const SearchAndSolidGroubsWords = (str) => { 
-    let resStr = ''
     let strGroupWordsMap = new Map();
     for (let i = 0; i < str.length -1; i++) {
         console.log(strGroupWordsMap.has(`${str[i]}${str[i + 1]}`));
